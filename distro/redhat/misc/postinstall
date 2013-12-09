@@ -16,3 +16,5 @@ for i in $CONFFILES; do
         /bin/cp ${GRAPHITE_PATH}/conf/$i.example ${GRAPHITE_PATH}/conf/$i;
     fi;
 done;
+
+/bin/chown -R carbon.carbon ${GRAPHITE_PATH}/storage

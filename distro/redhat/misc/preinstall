@@ -1,0 +1,4 @@
+/usr/bin/getent group carbon >/dev/null || /usr/sbin/groupadd -r carbon
+/usr/bin/getent passwd carbon >/dev/null || \
+    /usr/sbin/useradd -r -g carbon -d /opt/graphite \
+    -s /sbin/nologin -c "Carbon cache daemon" carbon
